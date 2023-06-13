@@ -1,0 +1,36 @@
+{
+  "name": "thylove-music",
+  "private": true,
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "nodemon --exec electron . --watch ./ --ext .js, .html, .css, .vue",
+    "electron:serve": "vite build & electron .",
+    "package": "electron-packager . thylove --platform=win32 --arch=x64 --icon=favicon.ico --out=./out --asar --app-version=1.0.0 --overwrite --ignore=node_modules"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.10",
+    "@element-plus/icons-vue": "^2.1.0",
+    "axios": "^1.4.0",
+    "electron": "^25.1.0",
+    "electron-win-state": "^1.1.22",
+    "element-plus": "^2.3.6",
+    "hls.js": "^1.4.5",
+    "qs": "^6.11.2",
+    "vue": "^3.2.47",
+    "vue-axios": "^3.5.2",
+    "vue-router": "^4.2.2",
+    "vuex": "next"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "electron-win-state": "^1.1.22",
+    "mockjs": "^1.1.0",
+    "nodemon": "^2.0.22",
+    "sass": "^1.63.2",
+    "vite": "^4.3.9"
+  }
+}
